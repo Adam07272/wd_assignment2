@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    
+<head>
+    <meta charset="utf-8"> 
+    <meta name="description" content="Restaurant Finder"> 
+    <meta name="keywords" content="restaurants, booking"> 
+    <meta name="author" content="Adam Nadeem"> 
+    <title>Register</title> 
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stylemobile.css" media="screen and (max-width: 768px)">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Restaurant Finder</h1> 
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Restaurants.html">Restaurants</a></li>
+            <li><a href="Recommendation.html">Reccomendation</a></li>            
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Reservation.html">Reservation</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<form id="regform" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php" class="register-form">
+
+<label>Username:
+<input type="text" id="name" name="username" required>
+</label>
+
+<label>Email Address:
+<input type="email" id="email" name="email" required>
+</label>
+
+<label>Phone Number:
+<input type="text" id="phone" name="phone" required>
+</label>
+
+<label>Password:
+<input type="password" id="pwd1" name="password" required>
+</label>
+
+<label>Confirm Password:
+<input type="password" id="pwd2" required>
+</label>
+
+<label>Gender:</label>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other
+
+<label>Dietary Preferences:</label>
+<input type="checkbox" name="diet" value="vegan"> Vegan
+<input type="checkbox" name="diet" value="halal"> Halal
+<input type="checkbox" name="diet" value="none"> None
+
+<label>Country/Region:
+<select name="country" id="country">
+    <option value="">Select</option>
+    <option value="Australia">Australia</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+</select>
+</label>
+
+<input type="submit" value="Register">
+
+</form>
+
+</main>
+
+<footer>
+    <p>&copy;Adam Nadeem 2026</p>
+</footer>
+
+</body>
+</html>

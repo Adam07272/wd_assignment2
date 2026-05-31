@@ -1,0 +1,444 @@
+/* ========================================
+   GLOBAL / BASE STYLES (ALL PAGES)
+======================================== */
+
+/* Remove default spacing from browser */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* minimum readable size */
+
+    display: flex;          /* enables flex layout */
+    flex-direction: column; /* stack vertically */
+    min-height: 100vh;      /* full screen height */
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 30px;
+    text-align: center;
+    flex: 1; /* pushes footer down */
+}
+
+/* TITLES */
+h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center; /* centers all h2 titles */
+}
+
+/* Global box sizing */
+* {
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   HEADER + NAVIGATION (ALL PAGES)
+======================================== */
+
+/* HEADER STYLING */
+header {
+    background-color: #333; /* dark background */
+    color: #fff;            /* white text */
+    text-align: center;     /* center everything */
+    padding: 20px;
+}
+
+/* NAVIGATION BAR */
+nav ul {
+    list-style-type: none; /* remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;      /* place links in a row */
+    margin: 0 15px;       /* spacing between links */
+}
+
+nav ul li a {
+    color: #fff;             /* link color */
+    text-decoration: none;  /* remove underline */
+    font-weight: bold;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: #ffcc00; /* highlight on hover */
+}
+
+
+/* ========================================
+   FOOTER (ALL PAGES)
+======================================== */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+
+/* ========================================
+   HOME PAGE / GENERAL SECTIONS
+======================================== */
+
+section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+
+    max-width: 900px;  /* controls box size */
+    margin: 20px auto; /* centers it */
+}
+
+.home-image {
+    display: block;
+    width: 100%;
+    max-width: 500px; /* max size */
+    height: auto;
+    margin: 20px auto; /* center it */
+}
+
+
+/* ========================================
+   RESTAURANTS PAGE
+======================================== */
+
+/* Grid layout for restaurants */
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Each restaurant card */
+.restaurant-list article {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.restaurant-list article:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Fix restaurant images */
+.restaurant-list article img {
+    width: 100%;        /* fill the card */
+    height: 200px;      /* same height for all images */
+    object-fit: cover;  /* crop nicely (no stretching) */
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   REGISTRATION FORM
+======================================== */
+
+.register-form {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+
+    width: 300px;
+    margin: 50px auto;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.register-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.register-form input[type="text"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+.register-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+
+    background-color: #333;
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+/* Hover */
+.register-form input[type="submit"]:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+
+/* ========================================
+   RECOMMENDATION PAGE 
+======================================== */
+
+.recommend-form {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 12px;
+
+    width: 380px;
+    max-width: 90%;
+    margin: 50px auto;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Labels */
+.recommend-form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs + selects */
+.recommend-form select,
+.recommend-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Focus effect */
+.recommend-form select:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button style (same as reservation) */
+.recommend-form button {
+    margin-top: 20px;
+
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover animation */
+.recommend-form button:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd633);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Click effect */
+.recommend-form button:active {
+    transform: scale(0.98);
+}
+
+
+/* ========================================
+   RESERVATION PAGE (UPGRADED)
+======================================== */
+
+.reservation-form {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 12px;
+
+    width: 380px;
+    max-width: 90%;
+    margin: 50px auto;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Section spacing */
+.reservation-form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs + selects */
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Focus effect */
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Special requests box */
+.reservation-form textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+/* RADIO + CHECKBOX GROUP */
+.reservation-form .options {
+    margin-top: 10px;
+}
+
+.reservation-form .options label {
+    display: flex;
+    align-items: center;       /* aligned vertically */
+    justify-content: flex-start;
+    gap: 8px;                  /* space between radio + text */
+}
+
+/* Checkbox alignment */
+.reservation-form .checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+/* Deposit text */
+.reservation-form .deposit {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Button */
+.reservation-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+
+    background: linear-gradient(135deg, #333, #555);
+    color: #fff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover animation */
+.reservation-form button:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd633);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Button click effect */
+.reservation-form button:active {
+    transform: scale(0.98);
+}
+
+
+/* ========================================
+   CALCULATOR PAGE
+======================================== */
+
+.calculator-form {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+
+    width: 300px;
+    margin: 50px auto;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.calculator-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.calculator-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+.calculator-form button {
+    width: 100%;
+    padding: 10px;
+
+    background-color: #333;
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+/* Hover */
+.calculator-form button:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Result text */
+.calculator-form p {
+    margin-top: 15px;
+    font-weight: bold;
+}

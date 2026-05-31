@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    
+<head>
+    <meta charset="utf-8"> 
+    <meta name="description" content="Restaurant Finder">
+    <meta name="keywords" content="restaurants, booking"> 
+    <meta name="author" content="Adam Nadeem"> 
+    <title>Calculator</title> 
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stylemobile.css" media="screen and (max-width: 768px)">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Restaurant Finder</h1> 
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Restaurants.html">Restaurants</a></li>
+            <li><a href="Recommendation.html">Reccomendation</a></li>            
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Reservation.html">Reservation</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+<h2>Bill Calculator</h2>
+
+	<form id="calculator-form" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php" class="calculator-form">
+
+<label>Price:
+<input type="number" id="price" required>
+</label>
+
+<label>People:
+<input type="number" id="numPeople" required>
+</label>
+
+<button type="button" onclick="calcBill()">Calculate</button>
+
+<p id="bill"></p>
+
+</form>
+
+<footer>
+    <p>&copy;Adam Nadeem 2026</p>
+</footer>
+
+</body>
+</html>

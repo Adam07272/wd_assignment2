@@ -1,0 +1,65 @@
+/* ========================================
+   MOBILE STYLES (screens under 768px)
+======================================== */
+
+/* Make navigation stack vertically */
+nav ul li {
+    display: block; /* stacks menu */
+    margin: 10px 0;
+}
+
+/* Reduce header size slightly */
+header {
+    padding: 15px;
+}
+
+/* Make main content less padded */
+main {
+    padding: 15px;
+}
+
+/* Make forms responsive */
+.register-form,
+.reservation-form,
+.calculator-form {
+    width: 90%; /* take most of screen */
+    margin: 20px auto; /* center */
+}
+
+/* Make restaurant grid stack */
+.restaurant-list {
+    grid-template-columns: 1fr; /* 1 per row */
+}
+
+/* Make inputs easier to tap */
+input, select, button {
+    font-size: 16px; /* better for mobile */
+}
+
+/* Slightly reduce headings */
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/* ============================= */
+/* TABLET (768–1023px) */
+/* ============================= */
+@media (max-width: 1023px) {
+
+    nav ul li {
+        display: block;      /* stack menu */
+        margin: 10px 0;
+    }
+
+    .reservation-form {
+        width: 80%;          /* wider form */
+    }
+
+    .restaurant-list {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
+}

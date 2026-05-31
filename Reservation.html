@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    
+<head>
+    <meta charset="utf-8"> 
+    <meta name="description" content="Restaurant Finder"> 
+    <meta name="keywords" content="restaurants, booking">
+    <meta name="author" content="Adam Nadeem"> 
+    <title>Reservation</title> 
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stylemobile.css" media="screen and (max-width: 768px)">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Restaurant Finder</h1> 
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Restaurants.html">Restaurants</a></li>
+            <li><a href="Recommendation.html">Reccomendation</a></li>            
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Reservation.html">Reservation</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<form id="resform"
+      method="post"
+      action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php"
+      class="reservation-form">
+
+<label for="rname">Full Name:</label>
+<input type="text" id="rname" name="rname" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="phone">Phone:</label>
+<input type="text" id="phone" name="phone" required>
+
+<label for="restaurant">Restaurant:</label>
+<select id="restaurant" name="restaurant" onchange="calculateDeposit()">
+    <option value="10">Mario Pizza</option>
+    <option value="20">Sushi House</option>
+    <option value="5">Burger Hub</option>
+    <option value="10">Curry Place</option>
+    <option value="15">BBQ Grill</option>
+    <option value="10">Vegan Delight</option>
+</select>
+
+<label for="date">Date:</label>
+<input type="date" id="date" name="date" required>
+
+<label for="time">Time:</label>
+<input type="time" id="time" name="time" required>
+
+<label for="people">Number of People:</label>
+<input type="number" id="people" name="people" min="1" required oninput="calculateDeposit()">
+
+<label for="requests">Special Requests:</label>
+<textarea id="requests" name="requests" 
+          placeholder="Any allergies or special requests...">
+</textarea>
+
+<p id="deposit" class="deposit">Deposit will appear here</p>
+
+<label>Deposit Method:</label>
+
+<div class="options">
+    <label>
+        <input type="radio" name="payment" value="voucher" onclick="togglePayment()">
+        Voucher
+    </label>
+
+    <label>
+        <input type="radio" name="payment" value="card" onclick="togglePayment()">
+        Online Payment
+    </label>
+</div>
+
+<div id="voucherBox" style="display:none;">
+    <label for="voucher">Voucher Code (12 digits):</label>
+    <input type="text" id="voucher" name="voucher" pattern="[0-9]{12}">
+</div>
+
+<div id="cardBox" style="display:none;">
+    <label for="cardNumber">Credit Card:</label>
+    <input type="text" id="cardNumber" name="card">
+</div>
+
+<label for="billEmail">Billing Email:</label>
+<input type="email" id="billEmail" name="billEmail">
+
+<div class="checkbox">
+    <input type="checkbox" onclick="copyEmail()">
+    <span>Same as email</span>
+</div>
+
+
+<button type="submit">Submit Reservation</button>
+
+</form>

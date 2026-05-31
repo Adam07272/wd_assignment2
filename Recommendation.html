@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Restaurant Recommendation">
+    <meta name="keywords" content="restaurants, recommendation">
+    <meta name="author" content="Adam Nadeem">
+    <title>Recommendation</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/stylemobile.css" media="screen and (max-width: 768px)">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Restaurant Finder</h1>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Restaurants.html">Restaurants</a></li>
+            <li><a href="Recommendation.html">Reccomendation</a></li>            
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Reservation.html">Reservation</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<h2>Restaurant Recommendation</h2>
+
+<section class="recommend-form">
+
+<h3>Choose Your Preferences</h3>
+
+    <label for="diet">Dietary Preference:</label>
+    <select id="diet">
+        <option value="none">None</option>
+        <option value="vegan">Vegan</option>
+        <option value="halal">Halal</option>
+    </select>
+
+
+    <label for="budget">Budget Range:</label>
+    <select id="budget">
+        <option value="low">Cheap ($)</option>
+        <option value="medium">Medium ($$)</option>
+        <option value="high">Expensive ($$$)</option>
+    </select>
+
+
+    <label for="purpose">Dining Purpose:</label>
+    <select id="purpose">
+        <option value="family">Family</option>
+        <option value="date">Date</option>
+        <option value="business">Business</option>
+    </select>
+
+
+    <button onclick="recommend()">Get Recommendation</button>
+
+
+    <p id="result"></p>
+
+
+    <button onclick="goToReservation()">Reserve This Restaurant</button>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; Adam Nadeem 2026</p>
+</footer>
+
+</body>
+</html>
